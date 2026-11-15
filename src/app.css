@@ -1,0 +1,103 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: "Segoe UI", system-ui, sans-serif;
+  background: #f0f4f8;
+  color: #1f2937;
+}
+
+.app { min-height: 100vh; display: flex; flex-direction: column; }
+
+.header {
+  background: linear-gradient(135deg, #2563eb, #7c3aed);
+  color: #fff;
+  padding: 24px 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.header h1 { font-size: 1.8rem; letter-spacing: 0.5px; }
+
+.clock {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 10px 16px;
+  border-radius: 10px;
+  backdrop-filter: blur(4px);
+}
+.clock-icon { font-size: 1.2rem; }
+.clock-time {
+  font-size: 1.3rem;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 1px;
+}
+
+.container {
+  flex: 1;
+  padding: 32px;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.subheader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.subheader h2 { font-size: 1.4rem; color: #1e3a8a; }
+
+.badge {
+  background: #2563eb;
+  color: #fff;
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.table-wrapper {
+  overflow-x: auto;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+}
+
+.student-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 800px;
+}
+
+.student-table thead {
+  background: #1e3a8a;
+  color: #fff;
+}
+.student-table th,
+.student-table td {
+  padding: 14px 16px;
+  text-align: left;
+  font-size: 0.92rem;
+}
+.student-table th { font-weight: 600; text-transform: uppercase; font-size: 0.78rem; letter-spacing: 0.5px; }
+
+.student-table tbody tr { border-bottom: 1px solid #e5e7eb; transition: background 0.15s; }
+.student-table tbody tr:nth-child(even) { background: #f8fafc; }
+.student-table tbody tr:hover { background: #e0e7ff; }
+.student-table tbody tr:last-child { border-bottom: none; }
+
+@media (max-width: 640px) {
+  .container { padding: 16px; }
+  .header { padding: 16px; }
+  .header h1 { font-size: 1.4rem; }
+}
